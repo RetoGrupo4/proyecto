@@ -1,0 +1,93 @@
+<section>
+<article>
+    <h2>Prerrequisitos</h2>
+    <p>Para poder continuar con este tutorial,
+        necesitarás tener un servidor Ubuntu 18.04,
+        además debes tener configurada una cuenta de usuario
+        diferente a la de superusuario (non-root), pero que cuente
+        con los permisos para utilizar el comando sudo, además necesitarás
+        contar con un cortafuegos (firewall) básico. Esto lo puedes configurar
+        usando nuestra guía inicial de configuración para Ubuntu 18.04.</p>
+
+    <h2>Paso 1 — Instalar Apache y actualizar el cortafuegos</h2>
+    <p>El servidor web, Apache es uno de los servidores web más populares en el mundo.
+        Se encuentra bien documentado y ha sido utilizado en buena parte de la historia de la web,
+        hechos que lo convierten en un muy buen candidato para ser escogido como el servidor por defecto de páginas
+        web.</p>
+
+    <h2>Instala Apache usando el administrador de paquetes de Ubuntu, apt:</h2>
+
+    sudo apt update
+    sudo apt install apache2
+
+    <p>Como éste es un comando sudo, estas operaciones son ejecutadas con los privilegios de superusuario.
+        Te preguntará por la contraseña de tu cuenta regular para verificar tus intenciones.</p>
+
+    <p>Una vez hayas autenticado tu contraseña, apt te informará cuáles paquetes se instalarán y cuánto espacio en
+        disco será requerido.
+        Digita Y y después Enter para continuar, así, la instalación procederá.</p>
+
+    <h2>Ajuste del cortafuegos para permitir el tráfico web</h2>
+    <p>Asumiendo que seguiste las instrucciones de configuración inicial del servidor y que habilitaste el cortafuegos
+        UFW,
+        ahora podrás asegurarte que tu cortafuegos permite el tráfico HTTP y HTTPS. Para hacerlo, verifica que el UFW
+        tiene
+        un perfil de aplicación para Apache mediante el comando:</p>
+
+    sudo ufw app list
+    Output
+    Available applications:
+    Apache
+    Apache Full
+    Apache Secure
+    OpenSSH
+
+    <p>Si solicitas la información del perfil Apache Full, se debería mostrar que el tráfico se encuentra habilitado
+        para los puertos 80 y 443:</p>
+
+    sudo ufw app info "Apache Full"
+    Output
+    Profile: Apache Full
+    Title: Web Server (HTTP,HTTPS)
+    Description: Apache v2 is the next generation of the omnipresent Apache web
+    server.
+
+    Ports:
+    80,443/tcp
+    <p>Para permitir el tráfico de entrada HTTP y HTTPS para este perfil, digita:</p>
+
+    sudo ufw allow in "Apache Full"
+    <p>Puedes hacer una comprobación instantánea de que todo ha ido según lo planeado visitando la dirección IP pública
+        de tu servidor en un navegador (si aún no conoces la dirección IP pública de tu servidor en la siguiente
+        sección encontrarás cómo hallarla):</p>
+
+    http://your_server_ip
+    <p>Verás la página web predeterminada de Apache para Ubuntu 18.04, la cual tiene propósitos informativos y de
+        prueba. Debería verse semejante a:</p>
+
+    <h2> Página predeterminada de Ubuntu 18.04 Apache</h2>
+
+    <p>Si viste esta página, entonces tu servidor web se encuentra instalado correctamente y es accesible a través del
+        cortafuegos.</p>
+
+    <p>Cómo encontrar la dirección IP pública de tu servidor</p>
+    <p>Si no conoces la dirección IP pública de tu servidor, existen varias formas de encontrarla. Usualmente, es la
+        dirección que usas para conectar tu servidor a través de SSH.</p>
+
+    <p>Hay diferentes formas de buscarla con la línea de comandos. En primer lugar, puedes usar la herramienta iproute2
+        para obtener tu IP, digitando lo siguiente:</p>
+
+    ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
+    <p>Esto retornará dos o tres líneas. Todas serán direcciones correctas, sin embargo,
+        es posible que tu computador solo pueda usar una de ellas, entonces es recomendable que las pruebes todas.</p>
+
+    <p>Un método alternativo es el uso de la utilidad curl para contactar un servicio externo que te diga cómo él ve a
+        tu servidor.
+        Esto se hace preguntándole a un servidor específico cuál es tu dirección IP:</p>
+
+    sudo apt install curl
+    curl http://icanhazip.com
+    <p>Sin importar el método que uses para obtener tu dirección IP, escríbela en la barra de dirección de tu navegador
+        web para ver la página predeterminada del Apache.</p>
+</article>
+</section>

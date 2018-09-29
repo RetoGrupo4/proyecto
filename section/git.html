@@ -1,0 +1,69 @@
+<section>    <h1>Manejo de repositorios</h1>
+    <h2>¿Cómo crear un repositorio?</h2>
+
+    <p>Para crear un repositorio en GitHub, solo hay que seleccionar el botón “Create a New Repo”, de la barra de
+        her-
+        ramientas, habiendo entrado a GitHub con tu cuenta:</p>
+
+
+
+    <p> Ahora habrá que llenar dos datos:</p>
+    <li> 1. Nombre del repositorio</li>
+    <li> 2. Descripción del repositorio (opcional)</li>
+
+
+
+    <h2>Crear un proyecto</h2>
+    <p>Al crear el repositorio, inmediatamente nos va a llevar a él. Como nuestro proyecto no tiene nada en su
+        interior, no
+        nos va a mostrar más que una ayuda para subir archivos y proyectos.
+        Para crear un proyecto desde cero, habrá que comenzar creando los archivos del mismo y luego subiéndolos a
+        la
+        página.</p>
+
+    <img src="./img/git1.png">
+    <br><br>
+
+    <p>En el primer recuadro de la ayuda, verás una serie de comandos para el terminal. </p>
+    <textarea name="codigo" cols=70px rows=15px readonly>
+
+        git init
+       
+        git add .
+        
+        git commit -m "comentario"
+      
+        git remote add origin https://github.com/Asaiz90/G4.git
+      
+        git push -u origin master
+        
+        
+        </textarea>
+    <br>
+    <img src="./img/git2.png">
+
+
+    <p>Antes de seguirlos, tendrás que instalar git:</p>
+    <textarea name="codigo" cols=70px rows=15px readonly>
+        sudo apt-get install git
+        </textarea>
+
+    <h2>Subir proyecto</h2>
+    <p> Para subir un proyecto ya realizado a GitHub, habrá que seguir exactamente los mismos pasos, ya que para
+        iniciar un
+        proyecto nuevo, habrá que subir los archivos creados y luego modificarlos en el editor de la página.</p>
+
+
+    <p>En este caso, los archivos junto con su contenido, ya están hechos. Solo hay que subirlos y editarlos si
+        surge algún
+        inconveniente.</p>
+    <p>Para subir un archivo hay que ubicarse en la carpeta del repositorio y seguir estos pasos:</p>
+    <textarea name="codigo" cols=70px rows=15px readonly>
+        git add archivo
+        git commit -m "comentario"
+        git push
+    </textarea>
+    <p>Es importante realizar los 3, ya que si no se ingresa un comentario, no se realiza el cambio.</p>
+
+
+    <p>Al terminar las modificaciones se podra presionar Pull Request para envierselo al creador del mismo.</p>

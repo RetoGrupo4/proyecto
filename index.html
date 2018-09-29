@@ -1,0 +1,119 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Reto wiki 1">
+    <meta name="keywords" content="HTML,CSS,PROXMOX">
+    <meta name="author" content="Anne Sierra, Jose Ranero, Jenire Perez, Álvaro Saiz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <!-- Bootstrap JQUERY-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript" src="js/app.js"></script>
+
+
+
+    <title>Reto Wiki 1</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="?aside=0&section=0"><img src="img/logos/proxmoxlogoa.png"></a>
+            <a href="?aside=1&section=2"><img src="img/logos/ubuntulogoa.png"></a>
+            <a href="?aside=2&section=3"><img src="img/logos/xamplogoablanco.png"></a>
+            <a href="?aside=3&section=4"><img src="img/logos/gitlogoablanco.png"></a>
+            <a href="?aside=4&section=7"><img src="img/logos/ajusteslogo.png" id="soluciones"></a>
+        </nav>
+    </header>
+
+
+    <!-- aside-->
+    <div id="aside"></div>
+     <!-- Section-->
+    <div id="section"></div>
+
+ 
+    <script>
+         //script aside
+        var aside = getUrlParameter('aside');
+        if (aside == 0) {
+            $('#aside').append('<div include-html="aside/asideproxmox.html"></div>');
+        }
+        if (aside == 1) {
+            $('#aside').append('<div include-html="aside/asideubuntu.html"></div>');
+        }
+        if (aside == 2) {
+            $('#aside').append('<div include-html="aside/asidexamp.html"></div>');
+        }
+        if (aside == 3) {
+            $('#aside').append('<div include-html="aside/asidegit.html"></div>');
+        }
+        if (aside == 4) {
+            $('#aside').append('<div include-html="aside/asidesoluciones.html"></div>');//a falta de saber que html usar
+        }
+            //script section
+        var section = getUrlParameter('section');
+
+        if (section == 0) {
+
+            $('#section').append('<div include-html="section/UsbBooteable.html"></div>');
+        }
+        if (section == 1) {
+
+            $('#section').append('<div include-html="section/proxmox.html"></div>');
+        }
+        if (section == 2) {
+
+            $('#section').append('<div include-html="section/ubuntu.html"></div>');
+        }
+        if (section == 3) {
+
+            $('#section').append('<div include-html="section/xamp.html"></div>');
+        }
+        if (section == 4) {
+
+            $('#section').append('<div include-html="section/git.html"></div>');
+        }
+        if (section == 5) {
+
+            $('#section').append('<div include-html="section/github.html"></div>');
+        }
+        if (section == 6) {
+
+            $('#section').append('<div include-html="section/versiones.html"></div>');
+        }
+        if (section == 7) {
+
+            $('#section').append('<div include-html="section/soluciones.html"></div>');
+        }
+
+        includeHTML();
+
+    </script>
+
+
+
+    <footer>
+        <small>&copy; Copyright 2018. Creado por Anne Sierra, Jose Ranero, Janire Perez y Álvaro Saiz</small>
+    </footer>
+</body>
+
+</html>
