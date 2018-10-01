@@ -14,7 +14,43 @@ footer li {
 }
 #copyright{clear:both;}
 
-@media (max-width: 767px) {footer{position:relative;bottom: 0; width:100%;}}
+@media (max-width: 767px) {
+
+	footer{
+		position:relative;bottom: 0; width:15%;
+		}
+	.ten, .two, #particles-js{ 
+		visibility: hidden;
+	}
+
+
+			img{
+		position:relative;
+		top: 0; 
+		width:15%;
+		}
+		aside, section{
+position:relative;
+width:15%;
+font-size: 50%;
+
+		}
+
+
+
+
+
+
+	@media (max-width: 400px) {
+
+	footer{
+		position:relative;bottom: 0; width:100%;
+		font-size: 50%;
+		}
+
+}
+	}
+}
 
 
 

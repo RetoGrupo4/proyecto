@@ -11,9 +11,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
     <link rel="stylesheet" href="css/main.css">
-    
     <link rel="stylesheet" href="css/estilo.css">
-
+	<title>Reto Wiki 1</title>
     <!-- Bootstrap JQUERY-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -24,23 +23,32 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
-
-
     <script type="text/javascript" src="js/app.js"></script>
 
-
-
-    <title>Reto Wiki 1</title>
 </head>
 
 <body>
+
+	<script src="js/particles.min.js"></script>
+	<script src="js/particulas.js"></script>
+      <div id="particles-js"></div>
+      
+<div id="axis2" class="ten">
+<img class="object boomerang multiple" src="img/logos/cohete.png">
+</div>
+
+<div id="axis" class="two">
+    <img class="object van move-left" src="img/logos/gata.png"/>
+</div>
+
+
     <header>
         <nav>
-            <a href="?aside=0&section=0"><img src="img/logos/proxmoxlogoa.png"></a>
-            <a href="?aside=1&section=2"><img src="img/logos/ubuntulogoa.png"></a>
-            <a href="?aside=2&section=3"><img src="img/logos/xamplogoablanco.png"></a>
-            <a href="?aside=3&section=4"><img src="img/logos/gitlogoablanco.png"></a>
-            <a href="?aside=4&section=7"><img src="img/logos/ajusteslogo.png" id="soluciones"></a>
+            <a href="?aside=0&section=0" ><img src="img/logos/proxmoxlogoa.png"></a>
+            <a href="?aside=1&section=2" id="ubuntu"><img src="img/logos/ubuntulogoa.png"></a>
+            <a href="?aside=2&section=3" id="xamp"><img src="img/logos/xamplogoablanco.png"></a>
+            <a href="?aside=3&section=4" id="git"><img src="img/logos/gitlogoablanco.png"></a>
+            <a href="?aside=4&section=6" id="ajustes"><img src="img/logos/ajusteslogo.png" ></a>
         </nav>
     </header>
 
@@ -51,7 +59,7 @@
     <div id="section"></div>
 
  
-    <script>
+     <script>
          //script aside
         var aside = getUrlParameter('aside');
         if (aside == 0) {
@@ -67,7 +75,7 @@
             $('#aside').append('<div include-html="aside/asidegit.html"></div>');
         }
         if (aside == 4) {
-            $('#aside').append('<div include-html="aside/asidesoluciones.html"></div>');//a falta de saber que html usar
+            $('#aside').append('<div include-html="aside/asidesolucion.html"></div>');
         }
             //script section
         var section = getUrlParameter('section');
@@ -92,18 +100,19 @@
 
             $('#section').append('<div include-html="section/git.html"></div>');
         }
-        if (section == 5) {
 
-            $('#section').append('<div include-html="section/github.html"></div>');
-        }
-        if (section == 6) {
+        if (section == 5) {
 
             $('#section').append('<div include-html="section/versiones.html"></div>');
         }
+        if (section == 6) {
+
+            $('#section').append('<div include-html="section/lenguajes.html"></div>');
+        }
         if (section == 7) {
 
-            $('#section').append('<div include-html="section/soluciones.html"></div>');
-        }
+$('#section').append('<div include-html="section/lenguajes.html"></div>');
+}
 
         includeHTML();
 
@@ -114,6 +123,7 @@
     <footer>
         <small>&copy; Copyright 2018. Creado por Anne Sierra, Jose Ranero, Janire Perez y Álvaro Saiz</small>
     </footer>
+
 </body>
 
 </html>

@@ -7,11 +7,12 @@ body {
 	width: 100%;
     height: 100%;
     background-color: grey;
-    background-image: url("../img/logos/fondo.png");
+    background-image: url("../img/logos/fondosincohete.png");
     background-attachment: fixed; 
     background-repeat: no-repeat; 
     background-position: center center; 
     background-size:100% 100%;
+    
 }
 
 header{
@@ -32,19 +33,24 @@ nav{
 }
 
 section{
-    float: right;
-    width: 63%;
+    
+        float: right;
+        width: 63%;
+        text-align: center;
+        padding-left: 3%;
+        padding-top: 3%;
+        background: rgb(255, 255, 255, 0.3);
+        margin-bottom: 2%;
+        margin-right: 22%;
+        z-index: 99;
+        position: absolute;
+        margin-left: 18%;
   
-    padding-left:3%;
-    padding-top:3%;
-    background:rgb(255, 255, 255, 0.3);
-    margin-bottom: 2%;
-    margin-right:22%; 
 }
 
 aside{
     float:left;
-    height: 100%;
+  position: absolute;
     width: 12%;
     left:0;
     text-decoration: none;
@@ -52,6 +58,7 @@ aside{
     padding-top:3%;
     margin-bottom: 2%;
     margin-left:2%; 
+    z-index: 2;
 }
 
 a{
@@ -75,3 +82,114 @@ footer{
     height:3% ;
     color:orange;
 }
+
+
+
+/*animaciones*/
+#particles-js {
+	width: 100%;
+	height:100%;
+    position: fixed;
+    z-index: -2;
+    /*background:rgba(0,0,0,.8);*/
+
+}
+
+#axis2:hover .move-left {
+    transform: translate(-350px,0);
+    -webkit-transform: translate(-350px,0); /** Safari & Chrome **/
+    -o-transform: translate(-350px,0); /** Opera **/
+    -moz-transform: translate(-350px,0); /** Firefox **/
+    
+}
+#axis:hover .move-left {
+    transform: translate(-350px,0);
+    -webkit-transform: translate(-350px,0); /** Safari & Chrome **/
+    -o-transform: translate(-350px,0); /** Opera **/
+    -moz-transform: translate(-350px,0); /** Firefox **/
+
+}
+
+.object {
+	position: relative;
+/** This css rule will make the object 
+move smoothly and animated **/
+	-webkit-transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    -o-transition: all 2s ease-in-out;
+   
+
+}
+
+/** Moving object to the left **/
+#axis2:hover .move-left{
+	transform: translate(-350px,0);
+	-webkit-transform: translate(-350px,0);
+	-o-transform: translate(-350px,0); 
+    -moz-transform: translate(-350px,0);
+
+}
+#axis:hover .move-left{
+	transform: translate(-350px,0);
+	-webkit-transform: translate(-350px,0);
+	-o-transform: translate(-350px,0); 
+    -moz-transform: translate(-350px,0);
+  
+}
+
+/** DIAGONALLY MOVEMENT **/
+/** Move object diagonally (Northeast) **/
+#axis2:hover .move-ne{
+	transform: translate(350px,-350px);
+	-webkit-transform: translate(350px,-350px);
+	-o-transform: translate(350px,-350px); 
+    -moz-transform: translate(350px,-350px);
+   
+	
+}
+#axis:hover .move-ne{
+	transform: translate(350px,-350px);
+	-webkit-transform: translate(350px,-350px);
+	-o-transform: translate(350px,-350px); 
+    -moz-transform: translate(350px,-350px);
+  
+	
+}
+
+/** Multiple **/
+#axis2:hover .multiple {
+	transform: translate(350px, -350px) rotate(360deg);
+	-webkit-transform: translate(350px, -350px) rotate(360deg);
+	-o-transform: translate(350px, -350px) rotate(360deg);
+    -moz-transform: translate(350px, -350px) rotate(360deg);
+
+}
+#axis:hover .multiple {
+	transform: translate(350px, -350px) rotate(360deg);
+	-webkit-transform: translate(350px, -350px) rotate(360deg);
+	-o-transform: translate(350px, -350px) rotate(360deg);
+    -moz-transform: translate(350px, -350px) rotate(360deg);
+
+}
+
+.boomerang {
+   left: 12px;
+   top: 300px;
+  
+ 
+}
+.van {
+    left: 1200px;
+    top: 467px;
+
+}
+
+
+.ten{
+    z-index: 0;
+    position: fixed;
+    }
+    .two{z-index:0;
+        position: fixed;
+        }
+
