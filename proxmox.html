@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <LINK REL=StyleSheet HREF="proxmox.css" TYPE="text/css" MEDIA=screen>
+    <title>Instalación del Proxmox</title>
+</head>
+<body>
+    
+    <h1>Instalación del Proxmox </h1>
+
+    <section>
+        <article>
+                <h1>Instalación </h1>
+            <p>Ahora que tenemos el usb de instalación procedemos a arrancar la máquina.
+                    Cuando arrancamos se nos muestra una primera pantalla que se queda 
+                    esperando para que le demos Enter. </p>
+                    <img src="proxmox1.png">
+                    <p>*Si queremos que nos lo instale con las opciones por defecto simplemente 
+                        nos salta-  mos este paso dando enter. Si por el contrario queremos 
+                        determinar la cantidad de root y swap escribimos en el prompt lo siguiente:</p>
+                        <img src="proxmox2.png">
+                        <p>En donde maxroot=10 es para indicar el tamaño que tendrá el root, y swapsize=2 
+                        para indicar la cantidad de memoria swap.
+                                Después de la carga, nos detalla el tipo de licencia y cuáles son las 
+                                condiciones de uso, si estamos  de acuerdo aceptamos...</p>
+                                <img src="proxmox3.png">
+                                <p>Lo siguiente que nos pregunta es donde queremos instalar Proxmox. Elegimos
+                                     la partición, le damos a next seleccionamos el país, la zona horaria y 
+                                     automáticamente nos detecta el teclado...</p>
+                                     <img src="proxmox4.png">
+                                     <p>Nos pedirá que introduzcamos un password  para el usuario, también nos pide un correo electrónico. 
+                                            Guardaremos bien la contraseña porque nos va hacer falta, el usuario lo crea por defecto Proxmox
+                                           <ul>
+                                               <li> <strong>Usuario:</strong> root</li>
+                                               <li> <strong>Pass: </strong> la que hayamos definido</li>
+                                           </ul>
+                                            </p>
+                                            <img src="proxmox5.png">
+                                            <p>Es el momento de configurar en que la dirección de red:
+                                                    <ul>
+                                                            <li> <strong>Hostaname:</strong> Proxmox.asirn.info</li>
+                                                            <li> <strong>Ip: </strong>  192.168.1.11</li>
+                                                            <li> <strong>Netmask: </strong>  255.255.255.0</li>
+                                                            <li> <strong>Gateway: </strong>   192.168.1.1</li>
+                                                            <li> <strong>DNS Server: </strong>   192.168.1.1</li>
+                                                        </ul>
+                                                   </p>
+                                                   <img src="proxmox6.png">
+                                                   <p>Una vez rellenados los campos anteriores, le damos a Next y esperamos a que se nos instale.
+                                                        Si ya ha terminado de hacer la instalación. Enhorabuena ya tienes un servidor Proxmox. 
+                                                        Ahora sólo queda reiniciar el servidor.</p>
+
+        </article>
+        <article>
+        <h1>Inicio </h1>
+        <p>Una  vez  acabada  la  instalación  el  programa  reiniciará, sacamos  el  CD  para  
+            que  no haya conflictos, nos mostrará menú de GRUB con las diferentes opciones posibles. </p>
+           <p>
+                Después    de    cargar, vemos el siguiente mensaje,  en  el  paso  anterior  pusimos una   IP, 
+                  esta   la   utilizaremos para acceder  via  web,  en  este  mensaje  nos muestra cual es la
+                   Url que debemos introducir en nuestro navegador para acceder a la interfaz grafica de Proxmox.
+           </p>    
+           <ul>
+               <li> <strong>URL:</strong> https://192.168.1.11/8006/</li>
+           </ul> <img src="proxmox7.png">
+           <p> Despues tenemos que logear con el usurio root y la contraseña que 
+               le dimos en la instalación.</p>
+            </ul> <img src="proxmox8.png">
+        </article>
+<article>
+<h1>Configuración</h1>
+    <p>Para terminar, es necesario hacer las últimas revisiones para ver si está todo correcto.
+         Tenemos dos forma de entrar a la administración de Proxmox:</p>
+<ol>
+    <li>   Consola SSH: mediante comandos. </li>
+          <li> Mediante acceso web:</li>
+</ol>
+<img src="proxmox9.png">
+
+<p>Para acceder a la interfaz gráfica vía web debemos introducir la url en el navegador, 
+    de esta manera podremos configurar Proxmox de una manera mucho más intuitiva.</p>
+    <p>  La primera vez que ingresamos la dirección IP junto con el puerto nos saldrá
+             un aviso de advertencia. </p>
+             <img src="proxmox10.png">
+             <p> Nos   pide   Usuario   y   contraseña   para acceder,   lo   introducimos, 
+            elegimos   el idioma, y conectamos… </p>
+            <p>Una vez logueados ya tenemos acceso completo a nuestro Proxmox.   </p>
+</article>
+    </section>
+</body>
+</html>
