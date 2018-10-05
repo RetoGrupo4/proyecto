@@ -1,102 +1,110 @@
-
-body{color:#FFF;}
-footer{position:absolute;bottom: 0; width:100%;}
+body {
+  color: #fff;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 
 nav {
-    padding: 0em 18em 3em 18em;
-	margin-bottom:3em;
+  padding: 0em 18em 3em 18em;
+  margin-bottom: 3em;
 }
 /*nuevo Anne*/
-iframe{
-	width:100%;
-	padding-right:1em;
-	padding-bottom: 2em;
+iframe {
+  width: 100%;
+  padding-right: 1em;
+  padding-bottom: 2em;
 }
-.imgsection{
-	width:50%;
-}
-
-.articleflex{
-	    flex: 2 1 100px;
+.imgsection {
+  width: 50%;
 }
 
-
-#flexsection{
-	    display: flex;
-		flex-wrap: wrap;
+.articleflex {
+  flex: 2 1 100px;
 }
 
-p{
-line-height:1.2em;
-margin: 1em;
+#flexsection {
+  display: flex;
+  flex-wrap: wrap;
 }
 
+p {
+  line-height: 1.2em;
+  margin: 1em;
+}
 
 footer li {
-    float: left;
-    font-size: 11px;
-    margin-right: 20px;
+  float: left;
+  font-size: 11px;
+  margin-right: 20px;
 }
-#copyright{clear:both;}
-section{
-	margin-top:21%;}
 
 
 
 @media (max-width: 767px) {
+  footer {
+    position: relative;
+    bottom: 0;
 
-	footer{
-		position:relative;
-		bottom: 0; 
-	
-		margin-top: 1em;
-		font-size: 8px;
-	 
+    margin-top: 1em;
+    font-size: 8px;
+  }
+  .ten,
+  .two,
+  #planetarojo,
+  #planetaverde,
+  #particles-js {
+    display: none;
+  }
 
-		}
-	.ten, .two, #planetarojo, #planetaverde, #particles-js{ 
-	display: none;
-	}
-	
+  img {
+    position: relative;
+    top: 0;
+    width: 15%;
+  }
+  aside,
+  section {
+    position: relative;
+    width: 5%;
+    font-size: 50%;
+  }
+  section {
+    margin-top: 10%;
+    margin-bottom: 40%;
+  }
+  img#imgsection {
+    width: 2em;
+  }
 
+  #tuerca {
+    width: 7%;
+  }
 
-	img{
-		position:relative;
-		top: 0; 
-		width:15%;
-		}
-aside, section{
-position:relative;
-width:15%;
-font-size: 50%;
-margin-bottom: 20%;
-
-		}
-
-		img#imgsection{
-	width:2em;}
-
-#tuerca{
-	width:7%;}
-
-nav {
-
+  nav {
     padding: 0em 0em 0em 0em;
+  }
+  #pie {
+    margin-top: 50%;
+  }
 
-}
-#pie{
-	margin-top: 40%;
-}
+  /*Interlineado*/
+  p {
+    line-height: 1.2em;
+  }
 
-/*Interlineado*/
-p{
-line-height:1.2em;
-}
+  span a {
+    font-size: 0.75em;
+  }
 
-span a{ 
-	font-size: 0.75em;
-}
-section{
-	margin-top:21%;
-}
+
+  div.hover{
+	/*  position: relative;*/
+	  height: 5%;
+	  width: 20%;
+	  float: left;
+	 /* border:1px solid black;*/
+	
+	}
 }
