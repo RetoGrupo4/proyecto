@@ -1,0 +1,51 @@
+   <section>
+       
+                <h1>PROBLEMAS ENCONTRADOS PARA HACER LA WIKI </h1>
+          
+          <article>
+        <h2>  Instalación del Proxmox → </h2>
+                    
+                    <p>No encontrábamos un programa booteable para hacer la
+instalación a través del USB, utilizamos el RUFUS y el UNETBOOTIN y no nos funcionaba; no
+era compatible.</p>
+
+<p> Probamos a través de comandos que buscamos en Internet pero tampoco llego a
+funcionar. Leímos que en windows se hacia a través de ETCHER y miramos el programa y
+vimos que también estaba para Ubuntu, lo descargamos y hicimos el USB de instalación.<p>
+
+<hr>
+           
+</article>
+                        <article>
+                            <h2>  Problemas con el Proxmox→ </h2>
+                        <p>No sabíamos como crear un contenedor porque tampoco
+sabíamos como funcionaban lo de las plantillas. Al principio descargamos una ISO y no valía
+para crear un contenedor, se necesitaba una plantilla. Una vez descargada la plantilla ya se
+pudo crear el contenedor.</p>
+                </article>                  <hr>
+   <article>
+                              <h2> Problemas de compatibilidad con Chrome </h2>
+                                <p>Al principio vimos que al abrir en local <span>(file://protocolo) </span> con Firefox se veia perfectamente; sin
+embargo en Chrome no aparecía ni el section ni el aside. Pensabamos que era problema de
+estilos en el navegador, probamos reseteando, mirando cualquier codigo, pero no solucionaba
+el problema.
+Abrimos en local <span>(file://protocolo) </span> en el chrome y le dimos a F12 para ver si había algun error
+que apareciese consola. Vimos que aparecia un error de javascritpt</p>
+
+<img id="ajax" src="./img/problemasajax2.png">
+                                  
+                                     <p>El error indica, que las solicitudes solo están soportadas por protocolos http , data, chrome, chrome-extension, https. 
+                              
+                                            </p>
+                                            <img src="./img/problemasajax1.jpg">
+                                            <p>En Firefox no nos sale ese problema porque si permite utilizar solicitudes AJAX usando el <span>file://protocolo </span>, el Chrome sin embargo, bloquea esto por defecto.
+                                                    
+                                                   </p>
+                                                   
+                                                   <p>Es posible habilitar una configuración en Google Chrome que permita solicitudes al sistema de archivos local desde el navegador <span>( allow-file-access-from-files) </span> pero no se recomienda usar.</p>
+
+        <p>Para que esta solicitud AJAX funcione en Chrome, debe realizar la solicitud a un servidor web ( XAMPP, ISS, NODEJS). </p>
+          
+           
+</article>
+    </section>

@@ -20,13 +20,15 @@ body {
   background-color: grey;
   background-image: url("../img/logos/fondosincohete.png");
   background-attachment: fixed;
-  background-repeat: no-repeat;
+  background-repeat: cover;
   background-position: center center;
   background-size: 100% 100%;
 }
 
 h1,h2{
   font-family: titulo;
+  margin-top: 1em;
+  font-size:2em;
 }
 
 
@@ -55,7 +57,7 @@ section {
   padding-left: 3%;
   padding-top: 3%;
   background: rgb(255, 255, 255, 0.3);
-  margin-bottom: 2%;
+ margin-bottom: 10%; 
   margin-right: 22%;
   z-index: 99;
   position: absolute;
@@ -88,7 +90,7 @@ li {
 /* footer*/
 footer {
   position: fixed;
-  z-index: 0;
+  z-index: 100;
   left: 0;
   right: 0;
   bottom: 0;
@@ -96,6 +98,7 @@ footer {
   width: 100%;
   height: 3%;
   color: orange;
+  margin-top: 1em;
 }
 /*animaciones*/
 /** ESTILOS DE LAS PARTICULAS IDENTIFICADOR Y POSICION DE LAS PARTICULAS Y SU PROFUNDIDAD **/
@@ -103,7 +106,7 @@ footer {
 	width: 100%;
 	height:100%;
     position: fixed;
-    z-index: -2;
+    z-index: -1;
     /*background:rgba(0,0,0,.8);*/
 
 }
@@ -168,7 +171,6 @@ move smoothly and animated **/
 
 }
 
-
 /*ESTILOS COHETE Y GATITA ************> HAY QUE AJUSTAR SEGUN EL TAMAÑO DE PANTALLA SU POSICION*/
 /*AJUSTESE LA GATA!! POR FAVOR AL TAMAÑO DE LA PANTALLA EN EL FICHERO MAIN Y LA LINEA MAX WIDTH  */
 .boomerang {
@@ -179,28 +181,35 @@ move smoothly and animated **/
   /*  left: 1028px;
     top: 467px;*/
     left: 991px;
-    top: 395px;
+    top: 400px;
 }
 
 .ten{
-    z-index: 0;
+    z-index: 1;
     position: fixed;
+  
     }
 .two{
-    z-index:0;
+    z-index:1;
     position: fixed;
-
+    margin-left: 27em;
         }
+p{
+			font-size:1.6em;}
 		
 /*ESTILOS PLANETAS*/
 #planetarojo{
+  z-index: 0;
 right: -3%;
 top: 0%;
 position: absolute;
 width: 25%;
+
+
 }
 	
 #planetaverde{
+  z-index: 0;
 top: 375px;
 left: -380px;
 position: absolute;
@@ -250,4 +259,25 @@ width: 3%;
 .hover img.color:hover{
   opacity: 0;
  
+}
+/*GIFS SATELITE*/
+
+#sateliterotando{
+		width:8%;
+		position:absolute;
+		margin-left:85%;
+    margin-top:15%;
+
+		}
+#sateliterotando2 {
+width: 2%;
+position: absolute;
+margin-left: 62%;
+margin-top: 9%;
+
+}
+
+span{
+  font-size: 1em;
+  color:orange;
 }

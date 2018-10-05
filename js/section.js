@@ -5,16 +5,11 @@
         if (aside == 0) {
             $('#aside').append('<div include-html="aside/asideproxmox.html"></div>');
         }
+
         if (aside == 1) {
-            $('#aside').append('<div include-html="aside/asideubuntu.html"></div>');
-        }
-        if (aside == 2) {
-            $('#aside').append('<div include-html="aside/asidexamp.html"></div>');
-        }
-        if (aside == 3) {
             $('#aside').append('<div include-html="aside/asidegit.html"></div>');
         }
-        if (aside == 4) {
+        if (aside == 2) {
             $('#aside').append('<div include-html="aside/asidesolucion.html"></div>');
         }
             //script section
@@ -51,7 +46,7 @@
         }
         if (section == 7) {
 
-$('#section').append('<div include-html="section/lenguajes.html"></div>');
+$('#section').append('<div include-html="section/problemas.html"></div>');
 }
 
         includeHTML();

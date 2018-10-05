@@ -1,75 +1,102 @@
 
-
 body{color:#FFF;}
 footer{position:absolute;bottom: 0; width:100%;}
 
 nav {
-
     padding: 0em 18em 3em 18em;
-
+	margin-bottom:3em;
+}
+/*nuevo Anne*/
+iframe{
+	width:100%;
+	padding-right:1em;
+	padding-bottom: 2em;
+}
+.imgsection{
+	width:50%;
 }
 
+.articleflex{
+	    flex: 2 1 100px;
+}
+
+
+#flexsection{
+	    display: flex;
+		flex-wrap: wrap;
+}
+
+p{
+line-height:1.2em;
+margin: 1em;
+}
 
 
 footer li {
     float: left;
-    font-size: 12px;
+    font-size: 11px;
     margin-right: 20px;
 }
 #copyright{clear:both;}
+section{
+	margin-top:21%;}
+
+
 
 @media (max-width: 767px) {
 
 	footer{
-		position:relative;bottom: 0; width:15%;
+		position:relative;
+		bottom: 0; 
+	
+		margin-top: 1em;
+		font-size: 8px;
+	 
+
 		}
-	.ten, .two, #particles-js{ 
-		visibility: hidden;
+	.ten, .two, #planetarojo, #planetaverde, #particles-js{ 
+	display: none;
 	}
+	
 
 
-			img{
+	img{
 		position:relative;
 		top: 0; 
 		width:15%;
 		}
-		aside, section{
+aside, section{
 position:relative;
 width:15%;
 font-size: 50%;
+margin-bottom: 20%;
 
 		}
+
+		img#imgsection{
+	width:2em;}
+
+#tuerca{
+	width:7%;}
 
 nav {
 
     padding: 0em 0em 0em 0em;
 
 }
+#pie{
+	margin-top: 40%;
+}
 
+/*Interlineado*/
+p{
+line-height:1.2em;
+}
 
-
-
-	@media (max-width: 400px) {
-
-	footer{
-		position:relative;bottom: 0; width:100%;
-		font-size: 50%;
-		}
-nav {
-
-    padding: 0em 0em 0em 0em;
-
+span a{ 
+	font-size: 0.75em;
+}
+section{
+	margin-top:21%;
 }
 }
-	}
-
-
-
-
-
-
-
-
-
-
-

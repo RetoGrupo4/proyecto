@@ -1,3 +1,4 @@
+
 <html>
 
 <head>
@@ -11,6 +12,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="css/bootstrap-responsive.min.css">-->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/estilo.css">
 
@@ -24,8 +26,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/app.js"></script>
-    <script type="text/javascript" src="js/estrellas.js"></script>
-
+    <script type="text/javascript" src="js/audio.js"></script>
+    
 </head>
 
 <body>
@@ -34,38 +36,42 @@
     <div id="planetarojo"><img src="img/logos/planetarojo.png"></div>
     <div id="planetaverde"><img src="img/logos/planetaverde9.png"></div>
    <div id="planetacrater"><img src="img/logos/planetaverde5.png"></div>
-    <div id="luna2"><img src="img/logos/luna1.png"></div>
-    <div id="planetatierra"><img src="img/logos/planetatierra5.png"></div>
-   <!-- PARTICULAS-->
+    
+    <div id="planetatierra"><img src="img/logos/planetatierra5.png" ></div>
+    <div id="sateliterotando"><img src="img/logos/Satelite-Rotando.gif" onclick="play()"></div>
+    
+    <div id="sateliterotando2"><img src="img/logos/SateliteAnimada.gif" onclick="play()"></div>
+   <!-- PARTICULAS Y ESTRELLAS -->
+   <script type="text/javascript" src="js/estrellas.js"></script>
 	<script src="js/particles.min.js"></script>
 	<script src="js/particulas.js"></script>
-      <div id="particles-js"></div>
+      <div id="particles-js"></div> 
      <!-- COHETE Y GATA-->
         <div id="axis2" class="ten">
-        <img class="object boomerang multiple" src="img/logos/cohete.png">
+        <a href="index.html"><img class="object boomerang multiple" src="img/logos/cohete.png"></a>
         </div>
         <div id="axis" class="two">
-            <img class="object van move-left" src="img/logos/gata.png"/>
+            <img class="object van move-left" src="img/logos/gata.png"/> 
         </div>
 
-    <header>
-        <nav id="navsup">
-            <a href="?aside=0&section=0" id="proxmox" ><div class="hover"><img src="img/logos/proxmoxlogoaCOLOR.png" > <img class="color" src="img/logos/proxmoxlogoa.png" ></div></a> 
-            <a href="?aside=1&section=2" id="ubuntu"><div class="hover"><img src="img/logos/ubuntulogoaCOLOR.png"><img class="color"src="img/logos/ubuntulogoa.png"></div></a></div> 
-            <a href="?aside=2&section=3" id="xamp"><div class="hover"><img src="img/logos/xampplogoacolor.png"><img class="color"src="img/logos/xamplogoablanco.png"></div></a>
-            <a href="?aside=3&section=4" id="git"><div class="hover"><img src="img/logos/gitlogoablancoCOLOR.png"><img class="color"src="img/logos/gitlogoablanco.png"></div></a>
-            <a href="?aside=4&section=6" id="ajustes"><div class="hover"><img src="img/logos/ajusteslogo.png" ></div></a></div> 
+    <header >
+        <nav >
+            <a href="?aside=0&section=0"><div class="hover" class="col-10 col-sm-10 col-md-10"><img src="img/logos/proxmoxlogoaCOLOR.png" > <img class="color" src="img/logos/proxmoxlogoa.png" ></div></a> 
+            <a href="?section=2"><div class="hover" class="col-10 col-sm-10 col-md-10"><img src="img/logos/ubuntulogoaCOLOR.png"><img class="color"src="img/logos/ubuntulogoa.png"></div></a></div> 
+            <a href="?section=3"><div class="hover" class="col-10 col-sm-10 col-md-10"><img src="img/logos/xampplogoacolor.png"><img class="color"src="img/logos/xamplogoablanco.png"></div></a>
+            <a href="?aside=1&section=4"><div class="hover" class="col-10 col-sm-10 col-md-10"><img src="img/logos/gitlogoablancoCOLOR.png"><img class="color"src="img/logos/gitlogoablanco.png"></div></a>
+            <a href="?aside=2&section=6"><div class="hover" class="col-10 col-sm-10 col-md-10"><img id="tuerca" src="img/logos/ajusteslogo.png" ></div></a></div> 
         </nav>
     </header>
 
 
     <!-- Aside-->
-    <div id="aside"></div>
+    <div id="aside" class="col-11 col-sm-11 col-md-11"></div>
      <!-- Section-->
-    <div id="section"></div>
+    <div id="section" class="col-12 col-sm-12 col-md-12"></div>
     <script type="text/javascript" src="js/section.js"></script>
      
-    <footer>
+    <footer id="pie">
         <small>&copy; Copyright 2018. Creado por Anne Sierra, Jose Ranero, Janire Perez y Álvaro Saiz</small>
     </footer>
 
